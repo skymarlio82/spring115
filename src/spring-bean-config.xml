@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--
+	<bean id="helloWorld" class="com.test.spring.example.HelloWorldService">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>default</value>
+		</constructor-arg>
+	</bean>
+	<bean id="jaxRpcSimpleTestService" 
+		name="simpleTestService,my1stTestService" 
+		factory-method="newJaxRpcSimpleTestServiceInstance" 
+		class="com.test.spring.example.JaxRpcSimpleTestService">
+		<property name="helloWorld">
+			<ref bean="helloWorld"/>
+		</property>
+	</bean>
+	<bean id="car1" factory-bean="jaxRpcSimpleTestService" factory-method="newCarInstance"/>
+	<bean id="bus1" factory-bean="jaxRpcSimpleTestService" factory-method="newBusInstance"/>
+	-->
+	<bean id="helloWorld" class="com.test.spring.example.HelloWorldService">
+	</bean>
+	<bean id="jaxRpcSimpleTestService" class="com.test.spring.example.JaxRpcSimpleTestService">
+		<property name="helloWorld">
+			<ref bean="helloWorld"/>
+		</property>
+	</bean>
+</beans>
